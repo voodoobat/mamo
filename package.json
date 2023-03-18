@@ -1,0 +1,125 @@
+{
+  "name": "nil",
+  "private": true,
+  "scripts": {
+    "dev": "gulp templates scss js icons images copy -ws --env development",
+    "build": "rm -rf dist && gulp scss icons images copy js && gulp production && gulp templates"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^8.3.0",
+    "browser-sync": "^2.29.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rev": "^9.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-squoosh": "^0.11.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgo": "^2.2.1",
+    "gulp-twig": "^1.2.0",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.4",
+    "sass": "^1.59.3",
+    "stylelint": "^14.16.1",
+    "stylelint-config-property-sort-order-smacss": "^9.1.0",
+    "stylelint-config-recommended-scss": "^6.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-prettier": "^2.0.0",
+    "stylelint-scss": "^4.5.0",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.76.2",
+    "yargs": "^17.7.1"
+  },
+  "resolutions": {
+    "graceful-fs": "^4.2.9"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {}
+      ]
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "endOfLine": "auto"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true,
+      "node": true
+    },
+    "extends": [
+      "prettier",
+      "eslint:recommended"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "indent": [
+        "error",
+        2
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "never"
+      ],
+      "eol-last": [
+        "error",
+        "always"
+      ],
+      "no-alert": "error",
+      "no-caller": "error",
+      "no-var": "error",
+      "no-eval": "error",
+      "no-undefined": "error",
+      "no-console": "warn"
+    }
+  },
+  "eslintIgnore": [
+    "**/*.min.js",
+    "node_modules/*"
+  ],
+  "stylelint": {
+    "plugins": [
+      "stylelint-scss",
+      "stylelint-prettier",
+      "stylelint-order"
+    ],
+    "extends": [
+      "stylelint-config-recommended-scss",
+      "stylelint-config-property-sort-order-smacss"
+    ],
+    "rules": {
+      "prettier/prettier": true
+    }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%"
+  ]
+}

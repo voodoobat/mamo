@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en_US">
+  <head>
+    <base href="{{ env.base }}">
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'favicons.twig' %}
+    <link rel="stylesheet" href="assets/{{ asset('global.css') }}">
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+    <script src="assets/{{ asset('global.js') }}"></script>
+  </body>
+</html>

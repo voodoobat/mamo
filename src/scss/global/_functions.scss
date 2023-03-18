@@ -1,0 +1,25 @@
+@use 'sass:math';
+@use 'sass:list';
+
+@function remove-unit($value) {
+  @if type-of($value) == number and not unitless($value) {
+    @return math.div($value, ($value * 0 + 1));
+  }
+
+  @return $value;
+}
+
+@function calc-column-size($size, $gap, $is-push: false) {
+  $ratio: math.div(list.nth($size, 2), list.nth($size, 1));
+  $gap-size: $gap * math.div((list.nth($size, 2) - 1), list.nth($size, 2));
+
+  @if $ratio == 1 {
+    @return 100%;
+  }
+
+  @if $is-push {
+    $gap-size: $gap-size - $gap;
+  }
+
+  @return calc(100% / #{$ratio} - #{$gap-size + 0.0025rem});
+}
