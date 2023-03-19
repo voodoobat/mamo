@@ -1,0 +1,29 @@
+<div class="course-box section_column">
+  <div class="course-box_text">
+    <div class="course-box_title">
+      {% if href %}
+        <a href="">
+          {{ title }} {% include 'icon.twig' with { name: 'arrow' } %}
+        </a>
+      {% else %}
+        <span>{{ title }}</span>
+      {% endif %}
+    </div>
+    <div class="course-box_note">
+      {{ note }}
+    </div>
+    <ul class="course-box_links">
+      {% for link in links %}
+        <li>
+          <a href="{{ link.href }}">
+            {{ link.name }} {% include 'icon.twig' with { name: 'arrow' } %}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="course-box_image">
+    <img src="{{ image }}" alt="{{ title }}">
+  </div>
+  <img class="course-box_icon" src="{{ icon }}" alt="">
+</div>

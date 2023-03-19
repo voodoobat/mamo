@@ -13,11 +13,11 @@ html {
     @include responsive-type(9px, 10px, $MQ_TABLET, $MQ_LAPTOP);
   }
 
-  @include media($MQ_LAPTOP $MQ_DESKTOP) {
-    @include responsive-type(10px, 13px, $MQ_LAPTOP, $MQ_DESKTOP);
-  }
+  //@include media($MQ_LAPTOP $MQ_DESKTOP) {
+  //  @include responsive-type(10px, 13px, $MQ_LAPTOP, $MQ_DESKTOP);
+  //}
 
-  @include media($MQ_DESKTOP, min) {
-    font-size: 13px;
+  @include media($MQ_LAPTOP, min) {
+    font-size: 10px;
   }
 }

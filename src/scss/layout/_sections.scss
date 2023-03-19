@@ -1,0 +1,21 @@
+.section {
+  padding: 8.8rem 0;
+
+  &.is-courses {
+    @include flex-container;
+    padding: $GRID_GAP 0;
+
+    .section_column {
+      @include flex-column(1 2);
+    }
+  }
+
+  &.is-snow {
+    background: $SNOW;
+  }
+}
+
+.section_title {
+  @include font(5.2rem 6rem, 400);
+  padding-bottom: 3rem;
+}

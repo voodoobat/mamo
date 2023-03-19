@@ -5,3 +5,14 @@
 @import 'global/root';
 @import 'global/reboot';
 @import 'global/responsive';
+@import 'global/type';
+@import 'global/buttons';
+
+@import 'layout/base';
+@import 'layout/header';
+@import 'layout/sections';
+
+@import 'components/logo';
+@import 'components/hero';
+@import 'components/course-box';
+@import 'components/education';

@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  padding: 9.2rem 0 11.2rem;
+  color: white;
+
+  b {
+    color: $GOLDEN;
+  }
+}
+
+.hero_text {
+  @include flex-container;
+}
+
+.hero_title {
+  @include font(5.2rem 1, 700);
+  @include flex-column(1 2);
+}
+
+.hero_note {
+  @include flex-column(1 2);
+  padding: 0 5rem 0 6rem;
+  font-size: 2.4rem;
+}
+
+.hero_image {
+  @include position(absolute, 0 0 0 0, -1);
+  @include gradient-overlay(linear-gradient(261.08deg, rgba(36, 40, 72, 0) 0%, $BLACK 100%));
+  background: $TEXT_COLOR;
+
+  > img {
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+  }
+}

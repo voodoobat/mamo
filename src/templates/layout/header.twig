@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="header">
+    {% include '../components/logo.twig' %}
+    <nav class="header_nav">
+      <ul class="header_menu">
+        {% for link in global.main_nav %}
+          <li>
+            <a href="{{ link.href }}">
+              {{ link.name }}
+              {% if link.child %}
+                {% include '../components/icon.twig' with { name: 'triangle' } %}
+              {% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <button class="header_search-button button is-small is-icon is-no-border" type="button">
+        {% include '../components/icon.twig' with { name: 'search' } %}
+      </button>
+      <button class="header_call-button button is-small is-bg" type="button">
+        <span>Обратный звонок</span>
+      </button>
+      <button class="header_user-button button is-small is-icon" type="button">
+        {% include '../components/icon.twig' with { name: 'user' } %}
+      </button>
+    </nav>
+  </div>
+</div>

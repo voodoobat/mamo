@@ -1,0 +1,70 @@
+@use 'sass:list';
+
+.education {
+  // ...
+}
+
+.education_text {
+  @include flex-container;
+}
+
+.education_note {
+  @include flex-column(3 4);
+}
+
+.education_links,
+.education_num {
+  @include flex-column(1 4);
+}
+
+.education_links {
+  padding-left: 2.5rem;
+
+  li {
+    margin-bottom: 0.3rem;
+  }
+}
+
+.education_numbers,
+.education_icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education_numbers {
+  padding: 4rem 0;
+}
+
+.education_num {
+  display: flex;
+
+  > b {
+   @include font(10rem 11.4rem, 300);
+  }
+
+  > span {
+    padding: 1rem 0 0 2rem;
+  }
+}
+
+.education_icons {
+  padding: 5.5rem 0 4rem;
+  border-top: 1px solid $GRAY;
+}
+
+.education_icon {
+  display: flex;
+  gap: 3rem;
+
+  $sizes: (10rem 9.5rem) (10rem 10rem) (10rem 11.2rem) (10rem 10rem);
+
+  @for $j from 1 through length($sizes) {
+    &:nth-child(#{$j}) {
+      $s: list.nth($sizes, $j);
+
+      > img {
+        @include size(list.nth($s, 1) list.nth($s, 2));
+      }
+    }
+  }
+}

@@ -89,3 +89,19 @@
     margin-left: calc-column-size($push, $gap, true);
   }
 }
+
+@mixin gradient-overlay($gradient) {
+  &::before,
+  &::after {
+    @include position(absolute, 0 0 0 0);
+    content: '';
+  }
+
+  &::before {
+    background: rgba($BLACK, 75%);
+  }
+
+  &::after {
+    background-image: $gradient;
+  }
+}

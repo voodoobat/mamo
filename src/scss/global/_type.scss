@@ -1,0 +1,14 @@
+body {
+  @include font(1.7rem 1.4, 300, #{Ubuntu, sans-serif});
+}
+
+a {
+  color: $GOLDEN;
+  text-decoration: none;
+}
+
+.text {
+  * + * {
+    margin-top: 0.65em;
+  }
+}

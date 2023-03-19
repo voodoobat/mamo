@@ -1,0 +1,7 @@
+.logo {
+  color: $TEXT_COLOR;
+
+  > .icon {
+    @include size(29.2rem 5.1rem);
+  }
+}

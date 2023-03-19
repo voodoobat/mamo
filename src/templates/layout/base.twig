@@ -6,10 +6,25 @@
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'favicons.twig' %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/{{ asset('global.css') }}">
+    {% block styles %}{% endblock %}
   </head>
   <body>
-    {% block content %}{% endblock %}
+    <div class="page {{ page.page_name }}">
+      <header class="page_head">
+        {% include 'header.twig' %}
+      </header>
+      <main class="page_main">
+        {% block content %}{% endblock %}
+      </main>
+      <footer class="page_foot">
+
+      </footer>
+    </div>
     <script src="assets/{{ asset('global.js') }}"></script>
+    {% block scripts %}{% endblock %}
   </body>
 </html>

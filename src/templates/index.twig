@@ -1,5 +1,56 @@
 {% extends 'layout/base.twig' %}
 
 {% block content %}
-  {# ... #}
+  <div class="hero">
+    <div class="hero_text container">
+      <h1 class="hero_title">
+        <b>Специализированный центр</b> медицинского обучения
+      </h1>
+      <div class="hero_note">
+        <p>
+          У нас вы сможете набраться теоретических знаний
+          и практического опыта, освоить новое профессиональное оборудование, повысить свою квалификацию.
+        </p>
+      </div>
+    </div>
+    <div class="hero_image">
+      <img src="images/home/hero.jpg" alt="Специализированный центр медицинского обучения">
+    </div>
+  </div>
+  <div class="section is-courses container">
+    {% for course in page.courses %}
+      {% include 'components/course-box.twig' with course %}
+    {% endfor %}
+  </div>
+  <div class="section is-snow">
+    <div class="education container">
+      <h2 class="section_title">Обучение в МАМО</h2>
+      <div class="education_text">
+        <div class="education_note text">
+          <p>Медицина — одна из наиболее быстро меняющихся областей профессионального знания. Постоянно появляются новые методы работы, выпускается новое оборудование. В таких условиях, постоянное совершенствование профессиональных навыков и владение новыми технологиями — залог вашей конкурентоспособности. Наши курсы позволяют пройти переподготовку и повысить свою квалификацию врачам и клиническим ординаторам.</p>
+          <p>У нас вы сможете набраться теоретических знаний и практического опыта, освоить новое профессиональное оборудование, повысить свою квалификацию.</p>
+        </div>
+        <ul class="education_links">
+          <li><a href="">Об академии</a></li>
+          <li><a href="">Об образовательной организации</a></li>
+        </ul>
+      </div>
+      <div class="education_numbers">
+        {% for num in page.education_nums %}
+          <div class="education_num">
+            <b>{{ num.count }}</b>
+            <span>{{ num.text }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="education_icons">
+        {% for icon in page.education_icons %}
+          <div class="education_icon">
+            <img src="{{ icon.icon }}" alt="">
+            <span>{{ icon.text }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
 {% endblock %}

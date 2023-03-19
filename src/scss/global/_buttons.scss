@@ -1,0 +1,34 @@
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  border: 1px solid $GOLDEN;
+  border-radius: $RADIUS;
+  white-space: nowrap;
+
+  &.is-no-border {
+    border: none;
+  }
+
+  &.is-bg {
+    background: $GOLDEN;
+    color: $WHITE;
+  }
+
+  &.is-icon {
+    padding: 1.5rem;
+  }
+
+
+  &.is-small {
+    padding: 1rem 2rem;
+
+    &.is-icon {
+      padding: 1rem;
+    }
+
+    > .icon {
+      @include size(2.4rem);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page_main {
+  flex-grow: 10;
+}
+
+.container {
+  margin: auto;
+  max-width: $CONTAINER_WIDTH;
+}

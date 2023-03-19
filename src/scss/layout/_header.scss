@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.7rem 0;
+}
+
+.header_nav {
+  display: flex;
+  align-items: center;
+}
+
+.header_nav {
+  @include position(relative, -0.5rem);
+}
+
+.header_menu {
+  display: flex;
+  gap: 3.5rem;
+
+  a {
+    color: $TEXT_COLOR;
+    text-decoration: none;
+    white-space: nowrap;
+
+    > .icon {
+      @include size(1.2rem 0.8rem);
+      margin-left: 0.2rem;
+      color: $GOLDEN;
+      transition: all 0.3s ease;
+    }
+
+    &:hover {
+      > .icon {
+        transform: rotate(180deg);
+        color: $TEXT_COLOR;
+      }
+    }
+  }
+}
+
+.header_search-button {
+  margin-left: 4rem;
+}
+
+.header_call-button {
+  margin-left: 3rem;
+}
+
+.header_user-button {
+  margin-left: 2rem;
+}
