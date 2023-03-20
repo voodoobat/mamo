@@ -1,0 +1,25 @@
+<div class="switcher js-switcher">
+  <div class="switcher_box">
+    {% for item in 0..4 %}
+      <div class="switcher_item js-switcher_item {{ loop.index == 1 ? 'is-active' : '' }}">
+        <div clas="switcher_image">
+          <img src="images/home/s-1.jpg" alt="">
+        </div>
+        <div class="switcher_text">
+          <div class="switcher_caption">
+            <h3 class="switcher_title">
+              Медицинская<br> коммуникация и этика
+            </h3>
+            <a class="button " href="">
+              Записаться
+            </a>
+          </div>
+          <div class="switcher_note">
+            <p>Заочный курс повышения квалификации направлен на приобретение базовых теоретических
+              знаний в области принципов и норм медицинской этики, практических навыков выполнения профессиональных задач в соответствии с данными нормами.</p>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

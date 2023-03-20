@@ -5,6 +5,7 @@
   border: 1px solid $GOLDEN;
   border-radius: $RADIUS;
   white-space: nowrap;
+  color: $TEXT_COLOR;
 
   &.is-no-border {
     border: none;

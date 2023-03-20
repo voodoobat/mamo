@@ -1,0 +1,68 @@
+.switcher {
+  box-shadow: 0 0 2.5rem rgba(0, 0, 0, 0.1);
+  border-radius: $RADIUS;
+}
+
+.switcher_box {
+  position: relative;
+  height: 72rem;
+  border-radius: $RADIUS;
+  background: $TEXT_COLOR;
+  overflow: hidden;
+}
+
+.switcher_item {
+  @include size(68rem 72rem);
+  @include position(absolute, 0 null null 0);
+  background: $WHITE;
+  transition: all 0.3s ease;
+
+  &::before {
+    @include position(absolute, 0 0 0 0);
+    content: '';
+    background: rgba($TEXT_COLOR, 70%);
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+
+  &.is-active {
+    &::before {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  &:not(.is-active) {
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.switcher_image {
+  height: 47.2rem;
+  border-radius: $RADIUS;
+  overflow: hidden;
+
+  > img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.switcher_text {
+  padding: 3rem 4rem;
+}
+
+.switcher_caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.7rem;
+}
+
+.switcher_title {
+  @include font(2.4rem 3.1rem);
+}

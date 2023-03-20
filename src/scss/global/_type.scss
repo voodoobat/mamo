@@ -2,6 +2,12 @@ body {
   @include font(1.7rem 1.4, 300, #{Ubuntu, sans-serif});
 }
 
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
 a {
   color: $GOLDEN;
   text-decoration: none;

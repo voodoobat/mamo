@@ -121,5 +121,8 @@
   "browserslist": [
     "last 2 versions",
     "> 1%"
-  ]
+  ],
+  "dependencies": {
+    "alpinejs": "^3.12.0"
+  }
 }
